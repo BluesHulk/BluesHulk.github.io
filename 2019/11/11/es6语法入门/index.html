@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>es6语法入门 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="1 new Set()1.1       new  Set()  Array .from()可以将其转化为数组 1.2       add(value)：添加某个值，返回Set结构本身。  new Set().add(val)重复add()添加若value 为相同值不添加delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。new Set().delete(val)  前提该数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="es6语法入门">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;11&#x2F;es6%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1 new Set()1.1       new  Set()  Array .from()可以将其转化为数组 1.2       add(value)：添加某个值，返回Set结构本身。  new Set().add(val)重复add()添加若value 为相同值不添加delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。new Set().delete(val)  前提该数">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-11T06:14:14.778Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -149,114 +152,256 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-es6语法入门" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      es6语法入门
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/11/es6%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8/" class="archive-article-date">
+
+        
+        <a href="/2019/11/11/es6%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8/" class="archive-article-date">
   	<time datetime="2019-11-11T05:47:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/11/es6%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8/">es6语法入门</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1 new Set()<br>1.1       new  Set()  Array .from()可以将其转化为数组</p>
+<p>1.2       add(value)：添加某个值，返回Set结构本身。  new Set().add(val)重复add()添加若value 为相同值不添加<br>delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。new Set().delete(val)  前提该数组内有要删除的值，即value在 new Set 内返回true<br>has(value)：返回一个布尔值，表示该值是否为Set的成员。 判断value是否在 new Set()内<br>clear()：清除所有成员，没有返回值。underfined</p>
+<p>1.3       keys()：返回键名的遍历器<br>values()：返回键值的遍历器<br>entries()：返回键值对的遍历器   除了entries()方法外其余 都会相应便利除数组元素值，此方法便利的结果是每个数值  val:val<br>forEach()：使用回调函数遍历每个成员  回调函数内部参数 是  val key</p>
+<p>1.4      let a = new Set([1, 2, 3]);<br>let b = new Set([4, 3, 2]);</p>
+<p>// 并集<br>let union = new Set([…a, …b]);<br>// Set {1, 2, 3, 4}</p>
+<p>// 交集<br>let intersect = new Set([…a].filter(function(x){<br>  b.has(x)<br>}));<br>// set {2, 3}</p>
+<p>// 差集<br>let difference = new Set([…a].filter(function(x){<br>  !b.has(x)<br>}));<br>// Set {1}</p>
+<p>2 new Map()</p>
+<p>2.1 new Map().set(1,’aaa’).set(1,’bbb’)多次赋值后面的将覆盖前面的赋值除非代码对建不一致</p>
+<p>2.2 new Map().get(1)  //‘bbb’  如果get一个未知的键返回unerfined</p>
+<p>2.3 当 new Map().set([‘a’],555)时 用get([‘a’])获取不到赋值的值返回为undefined   表面上看着是同一个键名 实际上是两个值  因为内存的地址是不一样的。 当把 [‘a’]赋给一个变量  let  k1 = [‘a’]   以k1赋值给 new Map().set(‘k1’,555) 再次以get获取的时候可以得到数组的赋值</p>
+<p>2.4 给new Map()赋值时 map的键可以已尽是任何名称         包括0和-0，布尔值true和字符串true则是两个不同的键。另外，undefined和null也是两个不同的键。虽然NaN不严格相等于自身，但 Map 将其视为同一个键。</p>
+<p>3.class的基本语法</p>
+<p> 3.1 class关键字可以定义为一个类，与之前的构造函数的区别在于 构造函数使用的是prototype 原型指向<br>例: function Point(x, y) {<br>       this.x = x;<br>       this.y = y;<br>     }</p>
+<pre><code>Point.prototype.toString = function () {
+  return &apos;(&apos; + this.x + &apos;, &apos; + this.y + &apos;)&apos;;
+};
 
-        <div class="article-info info-on-right">
-          
-          
+var p = new Point(1, 2);</code></pre><p>而class类为:</p>
+<pre><code> class Point {
+  constructor(x, y) {    //constructor方法，这就是构造方法   this指向实例对象即Point
+    this.x = x;
+    this.y = y;
+  }
 
+  toString() {
+    return &apos;(&apos; + this.x + &apos;, &apos; + this.y + &apos;)&apos;;
+  }
+}</code></pre><p> 调用也是和构造函数的方式一样调用    //类和模块的内部，默认就是严格模式</p>
+<p>   class子类的扩展 通过extends 继承了父类的熟悉和方法<br>   1.必须在子类的constructor内使用super()方法 否则会报错 super方法相当于 this对象 调用super相当于继承了父类的this 但是this的指向为子类构造函数；<br>   2.在子类的构造函数中必须先调用super方法才能使用this<br>   3.父类的 static方法会被子类继承<br>   4.子类的构造函数如果和父类的构造函数的 static静态方法同名 子类的会覆盖父类的静态方法(子类方法调用静态的时候)<br>   5.作为函数时,super()只能用在子类的构造函数之中，用在其他地方就会报错<br>  6.作为对象时，super 在子类的构造函数的普通方法中 指向父类构造函数的原型 在静态方法中指向父类； 所以在子类构造函数的普通方法中使用super对象获取不到父类的属性</p>
+<ol start="4">
+<li>async函数（异步函数）</li>
+<li>1.自带执行器和普通函数一样执行， async函数表示异步操作await表示跟在后面的表达式需要等待结果。</li>
+</ol>
+<p>4.2.async 函数有多种使用形式。<br>// 函数声明<br>    async function foo() {}</p>
+<pre><code>// 函数表达式
+const foo = async function () {};
+
+// 对象的方法
+let obj = { async foo() {} };
+obj.foo().then(...)
+
+// Class 的方法
+class Storage {
+  constructor() {
+    this.cachePromise = caches.open(&apos;avatars&apos;);
+  }
+
+  async getAvatar(name) {
+    const cache = await this.cachePromise;
+    return cache.match(`/avatars/${name}.jpg`);
+  }
+}
+
+const storage = new Storage();
+storage.getAvatar(&apos;jake&apos;).then(…);
+
+// 箭头函数
+const foo = async () =&gt; {};</code></pre><p>4.3     async函数内部return语句返回的值，会成为then方法回调函数的参数。<br>async function f() {<br>  return ‘hello world’;<br>}</p>
+<p>f().then(v =&gt; console.log(v))<br>// “hello world”</p>
+<p>4.4 只要一个await语句后面的 Promise 变为reject，那么整个async函数都会中断执行。reject的参数会被catch方法的回调函数接收到。</p>
+<p>async function f() {<br>  await Promise.reject(‘出错了’);<br>}</p>
+<p>f()<br>.then(v =&gt; console.log(v))<br>.catch(e =&gt; console.log(e))<br>// 出错了</p>
+<p>4.5     有时，我们希望即使前一个异步操作失败，也不要中断后面的异步操作。这时可以将第一个await放在try…catch结构里面，这样不管这个异步操作是否成功，第二个await都会执行。</p>
+<pre><code>另一种方法是await后面的 Promise 对象再跟一个catch方法，处理前面可能出现的错误。 </code></pre><p>async function f() {<br>       try {<br>         await Promise.reject(‘出错了’);<br>       } catch(e) {<br>       }<br>       return await Promise.resolve(‘hello world’);<br>     }</p>
+<p>async function f() {<br>      await Promise.reject(‘出错了’)<br>        .catch(e =&gt; console.log(e));<br>      return await Promise.resolve(‘hello world’);<br>    }</p>
+<pre><code>f()
+.then(v =&gt; console.log(v))
+// 出错了
+// hello world
+ f()
+ .then(v =&gt; console.log(v))
+ // hello world</code></pre><p>5 new Promise()语法<br>   var promise = new  Promise(function(resolve,reject){<br>                if(resolve){<br>                   //异步的语法<br>                }else{<br>                     reject(error)<br>                 }<br>          })</p>
+<p> Promise实例生成以后，可以用then方法分别指定resolved状态和rejected状态的回调函数。</p>
+<p> 不建议这么使用 1  因为第二种方法 更接近同步的写法    一般来说，不要在then方法里面定义Reject状态的回调函数（即then的第二个参数），总是使用catch方法<br>  1 promise.then(function(){<br>        //成功的函数语法<br>   },function(){<br>        //失败的函数语法<br>   })</p>
+<p>推荐使用   </p>
+<p>2 promise<br>  .then(function(data) { //cb<br>          // success<br> })<br> .catch(function(err) {<br>     // error<br> });<br>  (先then或者先catch都可以，没有捕获到错误就执行then，捕获到就不执行，如果报错出现在catch函数内则后面的then捕获不到报错，则需要再次catch捕获错误)<br>  Promise 新建后就会立即执行。使用then方法时会在其他执行后执行。<br>  例如<br>    var temp1 = new Promise(function(resolve, reject) {<br>           console.log(‘Promise’);<br>           resolve();<br>         });</p>
+<pre><code>     temp1.then(function() {
+       console.log(&apos;resolved.&apos;);
+     });
+
+     console.log(&apos;Hi!&apos;);
+     setTimeout(function(){
+         console.log(&quot;666&quot;)
+     },1000)
+
+// Promise
+// Hi!
+// resolved
+// 666</code></pre><p>   倘若两个new Promise()函数互相依赖</p>
+<p>   var p1 = new Promise(function(resolve,reject){</p>
+<pre><code>})
+
+var p2 = new Promise(function(resolve,reject){
+      reslove(p1)
+})</code></pre><p>  此时 p2 依赖与 p1<br> 只有在p1 的状态 为 resolve 时 p2才会执行。否则不会执行</p>
+<p>Generator 函数</p>
+<pre><code>是es6提供的一种异步编程解决方案
+形式上 是一个普通函数；其特点在与函数function与函数名之间有一个星号；函数内部使用yield
+调用该函数必须以next()调用；使指针指向下一个状态；也就是说每次调用next()方法内部函数的指针就从函数上一次停下来的地方继续执行；知道遇到下一个yield表达式；或者return 语句； next（）方法调用后返回的为 yield 后面的表达式； 如果为return value为return 后面的表达式的最终值  done为true； 表示遍历已经结束。后面再调用next()方法 value值都为underfined；done为true；</code></pre><p>  yield 表达式与return语句有相似之处也有区别；<br> 相似：都能返回紧跟在语句后面的表达式的值；<br> 区别:遇到yield 函数暂停执行；再次执行next()会继续执行；可以再函数内部使用多次；return只能一次；yield 表达式只能用在generator函数内；yield 表达式如果用在另一个表达式之中，必须放在圆括号里面；（yield 123）yield 表达式用作函数参数或放在赋值表达式的右边，可以不加括号。foo(yield ‘a’, yield ‘b’);</p>
+<p>   generator函数可以不使用yield 表达式；但是还是得调用next（）方法执行；</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/11/es6%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/11/%E7%AB%B9%E9%A9%AC%E6%98%AF%E4%B8%8D%E4%BC%9A%E9%A9%B0%E9%AA%8B%E7%9A%84%E9%A9%AC/" class="archive-article-date">
-  	<time datetime="2019-11-11T01:24:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/11/%E7%AB%B9%E9%A9%AC%E6%98%AF%E4%B8%8D%E4%BC%9A%E9%A9%B0%E9%AA%8B%E7%9A%84%E9%A9%AC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">竹马是不会驰骋的马</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/11/%E7%AB%B9%E9%A9%AC%E6%98%AF%E4%B8%8D%E4%BC%9A%E9%A9%B0%E9%AA%8B%E7%9A%84%E9%A9%AC/">竹马是不会驰骋的马</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">高满航</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-07T05:28:20.630Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/07/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -279,8 +424,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
