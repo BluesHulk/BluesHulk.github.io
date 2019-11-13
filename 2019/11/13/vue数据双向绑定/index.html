@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>vue数据双向绑定 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="demo: &#x2F;&#x2F; &#x2F;&#x2F;     &#x2F;&#x2F;     &#x2F;&#x2F;  var obj = {} Object.defineProperty(obj, &amp;apos;txt&amp;apos;, {     get: function () {         return obj     },      set: function (newValue) {         document.getElementById(&amp;">
+  <meta name="description" content="demo:               var obj = {} Object.defineProperty(obj, &amp;apos;txt&amp;apos;, {     get: function () {         return obj     },      set: function (newValue) {         document.getElementById(&amp;apos;tx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue数据双向绑定">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;13&#x2F;vue%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="demo: &#x2F;&#x2F; &#x2F;&#x2F;     &#x2F;&#x2F;     &#x2F;&#x2F;  var obj = {} Object.defineProperty(obj, &amp;apos;txt&amp;apos;, {     get: function () {         return obj     },      set: function (newValue) {         document.getElementById(&amp;">
+<meta property="og:description" content="demo:               var obj = {} Object.defineProperty(obj, &amp;apos;txt&amp;apos;, {     get: function () {         return obj     },      set: function (newValue) {         document.getElementById(&amp;apos;tx">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-13T05:24:15.153Z">
+<meta property="og:updated_time" content="2019-11-13T05:28:53.193Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -173,7 +173,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>demo:</p>
-<p>// <div id="app"><br>//     <input type="text" id="txt"><br>//     <p id="show-txt"></p><br>// </div></p>
+<div id="app">
+    <input type="text" id="txt">
+    <p id="show-txt"></p>
+</div>
+
+
 <pre><code>var obj = {}
 Object.defineProperty(obj, &apos;txt&apos;, {
     get: function () {
